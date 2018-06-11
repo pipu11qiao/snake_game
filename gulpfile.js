@@ -38,13 +38,13 @@ gulp.task('watch', function () {
 gulp.task('server',['sass'],function () {
     connect.server({
         root: './',
-        port: 888,
+        port: 8080,
         livereload: true
     });
 });
 
 gulp.task('compileSass', function () {
-    return gulp.src(scssPath + 'boxbox.scss')
+    return gulp.src(scssPath + 'game.scss')
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(sourcemaps.write())
